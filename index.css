@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 40 20% 97%;
+  --foreground: 30 10% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 30 10% 15%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 30 10% 15%;
+  --primary: 43 42% 52%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 15% 93%;
+  --secondary-foreground: 30 10% 20%;
+  --muted: 40 15% 93%;
+  --muted-foreground: 30 8% 45%;
+  --accent: 43 60% 90%;
+  --accent-foreground: 30 10% 15%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 40 15% 88%;
+  --input: 40 15% 88%;
+  --ring: 43 42% 52%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222 20% 10%;
+  --foreground: 40 20% 93%;
+  --card: 222 18% 14%;
+  --card-foreground: 40 20% 93%;
+  --popover: 222 18% 14%;
+  --popover-foreground: 40 20% 93%;
+  --primary: 43 42% 58%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 222 16% 20%;
+  --secondary-foreground: 40 15% 85%;
+  --muted: 222 16% 20%;
+  --muted-foreground: 40 10% 55%;
+  --accent: 222 16% 22%;
+  --accent-foreground: 40 20% 90%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 222 16% 22%;
+  --input: 222 16% 22%;
+  --ring: 43 42% 58%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.font-display {
+  font-family: 'Playfair Display', serif;
+}
+
+/* NAV */
+.velora-nav {
+  background-color: hsl(222 25% 12%);
+  border-bottom: 1px solid hsl(222 20% 20%);
+}
+
+.dark .velora-nav {
+  background-color: hsl(222 25% 8%);
+  border-bottom-color: hsl(222 20% 16%);
+}
+
+/* HERO */
+.velora-hero {
+  background: linear-gradient(135deg, hsl(222 30% 12%) 0%, hsl(222 25% 18%) 50%, hsl(43 30% 20%) 100%);
+}
+
+/* ADMIN SIDEBAR */
+.admin-sidebar {
+  background-color: hsl(222 25% 10%);
+  border-right: 1px solid hsl(222 20% 18%);
+}
+
+/* GOLD */
+.gold-accent {
+  color: hsl(43 58% 62%);
+}
+
+.gold-bg {
+  background-color: hsl(43 50% 50%);
+}
+
+.dark .gold-bg {
+  background-color: hsl(43 50% 50%);
+}
+
+/* NAVY */
+.navy-bg {
+  background-color: hsl(222 30% 14%);
+}
+
+.dark .navy-bg {
+  background-color: hsl(222 30% 9%);
+}
+
+/* PAGE BACKGROUNDS */
+.dark .bg-stone-50 {
+  background-color: hsl(222 18% 12%) !important;
+}
+
+.dark .bg-white {
+  background-color: hsl(222 18% 15%) !important;
+}
+
+.dark .bg-amber-50 {
+  background-color: hsl(43 20% 14%) !important;
+}
+
+/* BORDERS */
+.dark .border-stone-200 {
+  border-color: hsl(222 16% 22%) !important;
+}
+
+.dark .border-stone-100 {
+  border-color: hsl(222 16% 20%) !important;
+}
+
+.dark .border-amber-100 {
+  border-color: hsl(43 20% 20%) !important;
+}
+
+.dark .border-amber-200 {
+  border-color: hsl(43 20% 25%) !important;
+}
+
+/* TEXT */
+.dark .text-gray-900 {
+  color: hsl(40 20% 93%) !important;
+}
+
+.dark .text-gray-800 {
+  color: hsl(40 15% 85%) !important;
+}
+
+.dark .text-gray-700 {
+  color: hsl(40 12% 78%) !important;
+}
+
+.dark .text-gray-600 {
+  color: hsl(40 10% 68%) !important;
+}
+
+.dark .text-gray-500 {
+  color: hsl(40 8% 58%) !important;
+}
+
+.dark .text-gray-400 {
+  color: hsl(40 8% 50%) !important;
+}
+
+/* INPUTS */
+.dark input[type="text"],
+.dark input[type="email"],
+.dark input[type="password"],
+.dark input[type="number"],
+.dark input:not([type="radio"]):not([type="checkbox"]):not([type="range"]) {
+  background-color: hsl(222 18% 18%) !important;
+  border-color: hsl(222 16% 25%) !important;
+  color: hsl(40 20% 90%) !important;
+}
+
+.dark input::placeholder {
+  color: hsl(40 8% 45%) !important;
+}
+
+/* BOOK CARD */
+.book-card {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.book-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transform: translateY(-2px);
+}
+
+.dark .book-card {
+  background-color: hsl(222 18% 15%) !important;
+  border-color: hsl(222 16% 22%) !important;
+}
+
+/* TABLES */
+.dark .bg-stone-100,
+.dark .hover\:bg-stone-50:hover,
+.dark .bg-stone-50 {
+  background-color: hsl(222 18% 17%) !important;
+}
+
+/* SELECT CONTENT (portalled) */
+.dark [data-radix-popper-content-wrapper] [role="listbox"],
+.dark [data-radix-popper-content-wrapper] [cmdk-list] {
+  background-color: hsl(222 18% 16%) !important;
+  border-color: hsl(222 16% 24%) !important;
+  color: hsl(40 20% 90%) !important;
+}
+
+/* STATUS PILLS */
+.status-pending   { background: hsl(43 90% 90%);  color: hsl(43 70% 30%); }
+.status-confirmed { background: hsl(210 90% 90%); color: hsl(210 70% 30%); }
+.status-processing{ background: hsl(270 70% 92%); color: hsl(270 60% 35%); }
+.status-shipped   { background: hsl(200 80% 88%); color: hsl(200 70% 28%); }
+.status-delivered { background: hsl(140 60% 88%); color: hsl(140 55% 28%); }
+.status-cancelled { background: hsl(0 0% 90%);    color: hsl(0 0% 38%); }
+
+.dark .status-pending   { background: hsl(43 50% 22%);  color: hsl(43 80% 72%); }
+.dark .status-confirmed { background: hsl(210 50% 22%); color: hsl(210 80% 72%); }
+.dark .status-processing{ background: hsl(270 40% 24%); color: hsl(270 70% 75%); }
+.dark .status-shipped   { background: hsl(200 50% 22%); color: hsl(200 70% 72%); }
+.dark .status-delivered { background: hsl(140 40% 20%); color: hsl(140 60% 68%); }
+.dark .status-cancelled { background: hsl(0 0% 22%);    color: hsl(0 0% 65%); }
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.stagger-2 {
+  animation-delay: 0.15s;
+}
+
+/* DIALOG / MODAL dark */
+.dark [role="dialog"] {
+  background-color: hsl(222 18% 15%) !important;
+  border-color: hsl(222 16% 22%) !important;
+  color: hsl(40 20% 90%) !important;
+}
+
+/* SEPARATOR */
+.dark [data-orientation] {
+  background-color: hsl(222 16% 22%);
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: hsl(40 20% 70%); border-radius: 3px; }
+.dark ::-webkit-scrollbar-thumb { background: hsl(222 16% 35%); }
+
+/* REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up { animation: none; }
+  body { transition: none; }
+}
